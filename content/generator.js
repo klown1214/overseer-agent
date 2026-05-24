@@ -59,7 +59,7 @@ async function generateProductIdea(existingProducts = []) {
   const existingNames = existingProducts.map((p) => p.name).join(", ");
 
   const message = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-5",
     max_tokens: 1000,
     messages: [
       {
@@ -96,7 +96,7 @@ Rules:
 
 async function generatePromptPack(idea) {
   const message = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-5",
     max_tokens: 1000,
     messages: [
       {
@@ -140,7 +140,7 @@ No fluff. No filler. Professional quality only.`,
 
 async function generateDescription(idea) {
   const message = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-4-5",
     max_tokens: 1000,
     messages: [
       {
